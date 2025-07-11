@@ -15,7 +15,6 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
-        System.out.println(assertTrue( true ));
         System.out.println("Sample jenkin mari");
     }
 }

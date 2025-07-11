@@ -1,0 +1,67 @@
+Started by timer
+Running as SYSTEM
+Building in workspace /home/coder/project/workspace/jenkins/workspace/messi
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /home/coder/project/workspace/jenkins/workspace/messi/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/0xmariz/test_jenkins # timeout=10
+Fetching upstream changes from https://github.com/0xmariz/test_jenkins
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/0xmariz/test_jenkins +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision d85df30d29553113e116ed8f16929635e943161d (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d85df30d29553113e116ed8f16929635e943161d # timeout=10
+Commit message: "jenkins commit"
+ > git rev-list --no-walk 98a461afc8a078e202d1dbaab15c732b3cde5e59 # timeout=10
+[messi] $ mvn -f jenkin_test/pom.xml clean test
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36mcom.example:jenkin_test[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding jenkin_test 1.0[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mjenkin_test[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/coder/project/workspace/jenkins/workspace/messi/jenkin_test/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.0.2:resources[m [1m(default-resources)[m @ [36mjenkin_test[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/coder/project/workspace/jenkins/workspace/messi/jenkin_test/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mjenkin_test[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /home/coder/project/workspace/jenkins/workspace/messi/jenkin_test/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.0.2:testResources[m [1m(default-testResources)[m @ [36mjenkin_test[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/coder/project/workspace/jenkins/workspace/messi/jenkin_test/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mjenkin_test[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /home/coder/project/workspace/jenkins/workspace/messi/jenkin_test/target/test-classes
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] /home/coder/project/workspace/jenkins/workspace/messi/jenkin_test/src/test/java/com/example/AppTest.java:[18,38] 'void' type not allowed here
+[[1;34mINFO[m] 1 error
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  0.846 s
+[[1;34mINFO[m] Finished at: 2025-07-11T06:03:05Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m on project [36mjenkin_test[m: [1;31mCompilation failure[m
+[[1;31mERROR[m] [1;31m/home/coder/project/workspace/jenkins/workspace/messi/jenkin_test/src/test/java/com/example/AppTest.java:[18,38] 'void' type not allowed here[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Build step 'Invoke top-level Maven targets' marked build as failure
+Finished: FAILURE
